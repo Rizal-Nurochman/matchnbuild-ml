@@ -11,6 +11,7 @@ class RecommendRequest(BaseModel):
     location: Optional[str] = None
     estimated_budget: Optional[float] = 0
     land_area_min: Optional[float] = 0
+    land_area_max: Optional[float] = 0
     building_area: Optional[float] = 0
     num_floors: Optional[int] = 0
     num_bedrooms: Optional[int] = 0
