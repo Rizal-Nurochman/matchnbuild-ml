@@ -46,7 +46,7 @@ def vectorize_input(user_input, ranges):
     numeric_fields = ["estimated_budget", "land_area_min", "building_area", "num_floors", "num_bedrooms", "room_area"]
 
     for field in numeric_fields:
-        value = float(user_input.get(field, 0))
+        value = float(user_input.get(field) or 0)
         min_val, max_val = ranges[field]
         vector.append(normalize(value, min_val, max_val))
 
